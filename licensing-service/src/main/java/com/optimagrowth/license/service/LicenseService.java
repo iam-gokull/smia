@@ -1,5 +1,6 @@
 package com.optimagrowth.license.service;
 
+import java.util.List;
 import java.util.UUID;
 
 import com.optimagrowth.license.config.ConfigServer;
@@ -22,7 +23,6 @@ public class LicenseService {
 
     @Autowired
     ConfigServer config;
-
 
     public License getLicense(String licenseId, String organizationId){
         License license = licenseRepository.findByOrganizationIdAndLicenseId(organizationId, licenseId);
